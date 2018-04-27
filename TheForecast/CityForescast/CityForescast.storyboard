@@ -1,7 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cBt-6w-gEv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6gS-Fe-rIi">
+            <objects>
+                <navigationController id="cBt-6w-gEv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DJx-u3-Zdw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QWz-Rd-8o9" kind="relationship" relationship="rootViewController" id="DJd-JH-cRz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paY-L9-4aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1022" y="123"/>
+        </scene>
+        <!--City Search View Controller-->
+        <scene sceneID="LiB-Vb-2GV">
+            <objects>
+                <viewController id="QWz-Rd-8o9" customClass="CitySearchViewController" customModule="TheForecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dER-qa-QqT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kFa-Pa-1ha" userLabel="CitySearchBar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3k5-OQ-K1C" userLabel="CityTableView">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kFa-Pa-1ha" firstAttribute="trailing" secondItem="feS-RY-cQp" secondAttribute="trailing" id="9sn-es-Hte"/>
+                            <constraint firstItem="3k5-OQ-K1C" firstAttribute="top" secondItem="kFa-Pa-1ha" secondAttribute="bottom" id="GkD-7X-1oM"/>
+                            <constraint firstItem="kFa-Pa-1ha" firstAttribute="leading" secondItem="feS-RY-cQp" secondAttribute="leading" id="X4O-j9-IRr"/>
+                            <constraint firstItem="3k5-OQ-K1C" firstAttribute="leading" secondItem="feS-RY-cQp" secondAttribute="leading" id="Yob-34-Gwv"/>
+                            <constraint firstItem="feS-RY-cQp" firstAttribute="trailing" secondItem="3k5-OQ-K1C" secondAttribute="trailing" id="ati-XR-0id"/>
+                            <constraint firstItem="kFa-Pa-1ha" firstAttribute="top" secondItem="feS-RY-cQp" secondAttribute="top" id="eaS-vX-MYi"/>
+                            <constraint firstItem="feS-RY-cQp" firstAttribute="bottom" secondItem="3k5-OQ-K1C" secondAttribute="bottom" id="fJK-Br-r8x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="feS-RY-cQp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k4P-DK-Rju"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ry1-p5-Jwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-308" y="123"/>
+        </scene>
+    </scenes>
 </document>
