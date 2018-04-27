@@ -21,6 +21,9 @@
 		D6D5C90A2093D95100C76E0D /* CityForescast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C9092093D95100C76E0D /* CityForescast.storyboard */; };
 		D6D5C90B2093D95100C76E0D /* CityForescast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C9092093D95100C76E0D /* CityForescast.storyboard */; };
 		D6D5C90C2093D95100C76E0D /* CityForescast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C9092093D95100C76E0D /* CityForescast.storyboard */; };
+		D6D5C90E2093DC9E00C76E0D /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */; };
+		D6D5C90F2093DC9E00C76E0D /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */; };
+		D6D5C9102093DC9E00C76E0D /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,7 @@
 		D6D5C8E82093D14000C76E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D5C9052093D93400C76E0D /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
 		D6D5C9092093D95100C76E0D /* CityForescast.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityForescast.storyboard; sourceTree = "<group>"; };
+		D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CityListJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		D6D5C8F42093D7D600C76E0D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D5C90E2093DC9E00C76E0D /* CityListJSON.json in Resources */,
 				D6D5C8D12093D13F00C76E0D /* LaunchScreen.storyboard in Resources */,
 				D6D5C8CE2093D13F00C76E0D /* Assets.xcassets in Resources */,
 				D6D5C90A2093D95100C76E0D /* CityForescast.storyboard in Resources */,
@@ -285,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D5C90F2093DC9E00C76E0D /* CityListJSON.json in Resources */,
 				D6D5C90B2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D5C9102093DC9E00C76E0D /* CityListJSON.json in Resources */,
 				D6D5C90C2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
