@@ -10,6 +10,8 @@
 		7B8CC81EE197A0A808254CB6 /* Pods_TheForecastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF9064C6C74DC67A301D1B5 /* Pods_TheForecastTests.framework */; };
 		8DCB8E37149347F66FCAF3A6 /* Pods_TheForecastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E61B3F415BC3996EB20195 /* Pods_TheForecastUITests.framework */; };
 		AA6E83DD1C9210AE9CCE79DF /* Pods_TheForecast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE0852AC3E540D59EA213A4 /* Pods_TheForecast.framework */; };
+		D635FAB12093EE7F004AE22D /* ForecastServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635FAB02093EE7F004AE22D /* ForecastServices.swift */; };
+		D635FAB32093F13A004AE22D /* CityWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635FAB22093F13A004AE22D /* CityWeatherObject.swift */; };
 		D6D5C8C42093D13D00C76E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D5C8C32093D13D00C76E0D /* AppDelegate.swift */; };
 		D6D5C8C62093D13D00C76E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D5C8C52093D13D00C76E0D /* ViewController.swift */; };
 		D6D5C8C92093D13D00C76E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C8C72093D13D00C76E0D /* Main.storyboard */; };
@@ -56,6 +58,8 @@
 		807EA9DB6DB1FC376A6261D2 /* Pods-TheForecastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheForecastTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheForecastTests/Pods-TheForecastTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C76D558481CF797F12396F9 /* Pods-TheForecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheForecast.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheForecast/Pods-TheForecast.release.xcconfig"; sourceTree = "<group>"; };
 		B0E33BC4AD04351A95D7EA35 /* Pods-TheForecastUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheForecastUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheForecastUITests/Pods-TheForecastUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D635FAB02093EE7F004AE22D /* ForecastServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServices.swift; sourceTree = "<group>"; };
+		D635FAB22093F13A004AE22D /* CityWeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherObject.swift; sourceTree = "<group>"; };
 		D6D5C8C02093D13D00C76E0D /* TheForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D5C8C32093D13D00C76E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6D5C8C52093D13D00C76E0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +117,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D635FAAC2093ECDC004AE22D /* APIConnection */ = {
+			isa = PBXGroup;
+			children = (
+				D635FAAD2093ED2E004AE22D /* Models */,
+				D635FAB02093EE7F004AE22D /* ForecastServices.swift */,
+			);
+			path = APIConnection;
+			sourceTree = "<group>";
+		};
+		D635FAAD2093ED2E004AE22D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D635FAB22093F13A004AE22D /* CityWeatherObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D6D5C8B72093D13D00C76E0D = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +159,7 @@
 		D6D5C8C22093D13D00C76E0D /* TheForecast */ = {
 			isa = PBXGroup;
 			children = (
+				D635FAAC2093ECDC004AE22D /* APIConnection */,
 				D6D5C9022093D8E300C76E0D /* CityForescast */,
 				D6D5C8F42093D7D600C76E0D /* Utils */,
 				D6D5C8C32093D13D00C76E0D /* AppDelegate.swift */,
@@ -433,7 +455,9 @@
 			files = (
 				D6D5C8CC2093D13D00C76E0D /* TheForecast.xcdatamodeld in Sources */,
 				D6D5C8C62093D13D00C76E0D /* ViewController.swift in Sources */,
+				D635FAB32093F13A004AE22D /* CityWeatherObject.swift in Sources */,
 				D6D5C8C42093D13D00C76E0D /* AppDelegate.swift in Sources */,
+				D635FAB12093EE7F004AE22D /* ForecastServices.swift in Sources */,
 				D6D5C9062093D93400C76E0D /* CitySearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +637,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ47Z9336G;
 				INFOPLIST_FILE = TheForecast/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ITCrowdChallenge.TheForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -629,7 +656,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ47Z9336G;
 				INFOPLIST_FILE = TheForecast/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ITCrowdChallenge.TheForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -646,7 +676,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ47Z9336G;
 				INFOPLIST_FILE = TheForecastTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ITCrowdChallenge.TheForecastTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -664,7 +698,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ47Z9336G;
 				INFOPLIST_FILE = TheForecastTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ITCrowdChallenge.TheForecastTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -681,7 +719,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ47Z9336G;
 				INFOPLIST_FILE = TheForecastUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ITCrowdChallenge.TheForecastUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -698,7 +740,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GZ47Z9336G;
 				INFOPLIST_FILE = TheForecastUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ITCrowdChallenge.TheForecastUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
