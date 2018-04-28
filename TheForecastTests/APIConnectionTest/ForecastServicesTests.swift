@@ -6,8 +6,19 @@
 //  Copyright © 2018 IT Crowd Challenge. All rights reserved.
 //
 
-import UIKit
+import XCTest
 
-class ForecastServicesTests: NSObject {
+class ForecastServicesTests: XCTestCase {
 
+    func testParseCityWeatherObject() {
+        if let data = MockJSON.weatherJSON.data(using: String.Encoding.utf8) {
+            do {
+                let result = try JSONDecoder().decode(CityWeatherObject.self, from: data)
+                print("Success: \(result)")
+            } catch {
+                XCTFail("Error parsing a CityWeatherObject \(error)")
+            }
+        }
+    }
+    
 }
