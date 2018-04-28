@@ -56,6 +56,10 @@
                         <viewLayoutGuide key="safeArea" id="feS-RY-cQp"/>
                     </view>
                     <navigationItem key="navigationItem" id="k4P-DK-Rju"/>
+                    <connections>
+                        <outlet property="citySearchBar" destination="kFa-Pa-1ha" id="wx2-Ri-Qpc"/>
+                        <outlet property="cityTableView" destination="3k5-OQ-K1C" id="d2b-sj-rUN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry1-p5-Jwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
