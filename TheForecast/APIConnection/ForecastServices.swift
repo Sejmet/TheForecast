@@ -16,7 +16,7 @@ class ForecastServices: NSObject {
     private var forecastFactory: ForecastModelsFactory = ForecastModelsFactory()
     
     public func cityWeatherById(cityId: String, completion: @escaping (_ cityObject: CityWeatherObject?, _ error: Error?) -> Void) {
-        let urlString: String = "\(apiHost)/id=\(cityId)&appid=\(openWeatherApiKey)"
+        let urlString: String = "\(apiHost)/id=\(cityId)&appid=\(openWeatherApiKey)&units=metric"
         if let url: URL = URL(string: urlString) {
             Alamofire.request(url).responseJSON { (response: DataResponse<Any>) in
                 if let json = response.result.value {
