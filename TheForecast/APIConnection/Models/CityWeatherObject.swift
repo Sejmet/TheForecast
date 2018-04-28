@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 public struct CityWeatherObject: Decodable {
-    public let id: String?
+    public let id: Int?
     public let name: String?
     public let coord: CoordinateObject?
-    public let weather: WeatherObject?
+    public let weather: [WeatherObject]?
     public let main: MainObject?
 }
 
@@ -23,7 +23,7 @@ public struct CoordinateObject: Decodable {
 }
 
 public struct WeatherObject: Decodable {
-    public let id: String?
+    public let id: Int?
     public let main: String?
     public let description: String?
 }

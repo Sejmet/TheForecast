@@ -15,7 +15,7 @@ class ForecastModelsFactory: NSObject {
             let result = try JSONDecoder().decode(CityWeatherObject.self, from: json)
             return result
         } catch {
-            print("Error parsing a CityWeatherObject")
+            print("Error parsing a CityWeatherObject", error)
             return nil
         }
     }
