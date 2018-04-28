@@ -13,13 +13,15 @@ class CityDetailViewModel: NSObject {
     var cityObject: CityWeatherObject?
     var forecastService: ForecastServices = ForecastServices()
     
-    func cityWeatherById(cityId: String) {
+    func cityWeatherById(cityId: String, completion: @escaping (_ error: Error?) -> Void) {
         forecastService.cityWeatherById(cityId: cityId) { (cityWeatherObject: CityWeatherObject?, error: Error?) in
             if error == nil {
                 self.cityObject = cityWeatherObject
             } else {
                 print(error!)
             }
+            
+            completion(error)
         }
     }
     
