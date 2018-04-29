@@ -59,7 +59,7 @@ class CityDetailViewController: UIViewController {
         }
         
         let location = CLLocationCoordinate2DMake(latitude, longitude)
-        let span = MKCoordinateSpanMake(0.1, 0.1)
+        let span = MKCoordinateSpanMake(1, 1)
         let region = MKCoordinateRegionMake(location, span)
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
