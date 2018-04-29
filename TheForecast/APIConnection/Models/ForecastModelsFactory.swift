@@ -20,4 +20,23 @@ class ForecastModelsFactory: NSObject {
         }
     }
     
+    public func makeCityObject(json: Data) -> CityObject? {
+        do {
+            let result = try JSONDecoder().decode(CityObject.self, from: json)
+            return result
+        } catch {
+            print("Error parsing a CityObject", error)
+            return nil
+        }
+    }
+    
+    public func makeCityResponseObject(json: Data) -> CityListResponse? {
+        do {
+            let result = try JSONDecoder().decode(CityListResponse.self, from: json)
+            return result
+        } catch {
+            print("Error parsing a CityListResponse", error)
+            return nil
+        }
+    }
 }
