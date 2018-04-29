@@ -12,6 +12,7 @@ class CityDetailViewModel: NSObject {
 
     private var cityObject: CityWeatherObject?
     private let forecastService: ForecastServices = ForecastServices()
+    var nextFiveDaysWeather: FiveDaysWeatherObject?
     
     func cityWeatherById(cityId: Int, completion: @escaping (_ error: Error?) -> Void) {
         forecastService.cityWeatherById(cityId: cityId) { (cityWeatherObject: CityWeatherObject?, error: Error?) in
@@ -23,6 +24,19 @@ class CityDetailViewModel: NSObject {
             
             completion(error)
         }
+    }
+    
+    func weatherForTheNextFiveDays(cityId: Int, completion: @escaping (_ error: Error?) -> Void) {
+        forecastService.cityWeatherForNext5DaysById(cityId: cityId) { (fiveDaysWeatherObject: FiveDaysWeatherObject?, error: Error?) in
+            if error == nil {
+                self.nextFiveDaysWeather = fiveDaysWeatherObject
+            } else {
+                print(error!)
+            }
+            
+            completion(error)
+        }
+        
     }
     
     func cityId() -> Int? {
