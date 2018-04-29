@@ -14,7 +14,7 @@ class CitySearchViewModel: NSObject {
     var filteredCityArray: [CityObject] = []
     
     func populateCityArray() {
-        cityArray.append(CityObject(id: 12345, name: "Hurzuf", country: "RU", coord: nil))
+        cityArray.append(CityObject(id: 707860, name: "Hurzuf", country: "RU", coord: nil))
         cityArray.append(CityObject(id: 122335, name: "Gohuris", country: "RU", coord: nil))
         cityArray.append(CityObject(id: 12225, name: "Gorkhā", country: "RU", coord: nil))
         cityArray.append(CityObject(id: 123555, name: "Buenos Aires", country: "AR", coord: nil))
