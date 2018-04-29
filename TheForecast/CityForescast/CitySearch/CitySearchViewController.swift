@@ -101,8 +101,8 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            searchViewModel.deleteCityFromCoreData(cityObject: searchViewModel.coreDataCityArray[indexPath.row])
-            searchViewModel.coreDataCityArray.remove(at: indexPath.row)
+            searchViewModel.deleteCityFromPersistedModel(cityIndex: indexPath.row)
+            searchViewModel.deleteCityFromCoreDataCityArray(cityIndex: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }

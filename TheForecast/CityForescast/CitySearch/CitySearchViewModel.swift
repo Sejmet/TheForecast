@@ -38,6 +38,10 @@ class CitySearchViewModel: NSObject {
         filteredCityArray = cityArray.filter { ($0.name?.localizedCaseInsensitiveContains(cityName))! }
     }
     
+    func deleteCityFromCoreDataCityArray(cityIndex: Int) {
+        coreDataCityArray.remove(at: cityIndex)
+    }
+    
     func populateCoreDataCityArray() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -86,7 +90,7 @@ class CitySearchViewModel: NSObject {
         }
     }
     
-    func isPersisted(cityObject: CityObject) -> Bool {
+    private func isPersisted(cityObject: CityObject) -> Bool {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return false
         }
@@ -111,7 +115,7 @@ class CitySearchViewModel: NSObject {
         return false
     }
     
-    func checkFivePersistObject() {
+    private func checkFivePersistObject() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -134,7 +138,9 @@ class CitySearchViewModel: NSObject {
         saveCoreDataContext()
     }
     
-    func deleteCityFromCoreData(cityObject: CityObject) {
+    func deleteCityFromPersistedModel(cityIndex: Int) {
+        let cityObject = coreDataCityArray[cityIndex]
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -159,7 +165,7 @@ class CitySearchViewModel: NSObject {
         saveCoreDataContext()
     }
     
-    func saveCoreDataContext() {
+    private func saveCoreDataContext() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
