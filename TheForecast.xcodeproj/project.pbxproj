@@ -15,6 +15,10 @@
 		D612ED6B2095277A009EB1DE /* CityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612ED6A2095277A009EB1DE /* CityDetailViewModel.swift */; };
 		D612ED6F209540C1009EB1DE /* CitySearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612ED6D209540C1009EB1DE /* CitySearchTableViewCell.swift */; };
 		D612ED70209540C1009EB1DE /* CitySearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D612ED6E209540C1009EB1DE /* CitySearchTableViewCell.xib */; };
+		D612ED72209543B1009EB1DE /* CityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612ED71209543B1009EB1DE /* CityObject.swift */; };
+		D612ED732095458C009EB1DE /* CityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D612ED71209543B1009EB1DE /* CityObject.swift */; };
+		D612ED7520955C8C009EB1DE /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D612ED7420955C8C009EB1DE /* CityListJSON.json */; };
+		D612ED7620955CAA009EB1DE /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D612ED7420955C8C009EB1DE /* CityListJSON.json */; };
 		D635FAB12093EE7F004AE22D /* ForecastServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635FAB02093EE7F004AE22D /* ForecastServices.swift */; };
 		D635FAB32093F13A004AE22D /* CityWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635FAB22093F13A004AE22D /* CityWeatherObject.swift */; };
 		D635FAB52093F57B004AE22D /* ForecastModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D635FAB42093F57B004AE22D /* ForecastModelsFactory.swift */; };
@@ -37,9 +41,6 @@
 		D6D5C90A2093D95100C76E0D /* CityForescast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C9092093D95100C76E0D /* CityForescast.storyboard */; };
 		D6D5C90B2093D95100C76E0D /* CityForescast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C9092093D95100C76E0D /* CityForescast.storyboard */; };
 		D6D5C90C2093D95100C76E0D /* CityForescast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C9092093D95100C76E0D /* CityForescast.storyboard */; };
-		D6D5C90E2093DC9E00C76E0D /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */; };
-		D6D5C90F2093DC9E00C76E0D /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */; };
-		D6D5C9102093DC9E00C76E0D /* CityListJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		D612ED6A2095277A009EB1DE /* CityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewModel.swift; sourceTree = "<group>"; };
 		D612ED6D209540C1009EB1DE /* CitySearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTableViewCell.swift; sourceTree = "<group>"; };
 		D612ED6E209540C1009EB1DE /* CitySearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitySearchTableViewCell.xib; sourceTree = "<group>"; };
+		D612ED71209543B1009EB1DE /* CityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityObject.swift; sourceTree = "<group>"; };
+		D612ED7420955C8C009EB1DE /* CityListJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CityListJSON.json; sourceTree = "<group>"; };
 		D635FAB02093EE7F004AE22D /* ForecastServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServices.swift; sourceTree = "<group>"; };
 		D635FAB22093F13A004AE22D /* CityWeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherObject.swift; sourceTree = "<group>"; };
 		D635FAB42093F57B004AE22D /* ForecastModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModelsFactory.swift; sourceTree = "<group>"; };
@@ -95,7 +98,6 @@
 		D6D5C8E82093D14000C76E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6D5C9052093D93400C76E0D /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
 		D6D5C9092093D95100C76E0D /* CityForescast.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityForescast.storyboard; sourceTree = "<group>"; };
-		D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CityListJSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 			children = (
 				D635FAB22093F13A004AE22D /* CityWeatherObject.swift */,
 				D635FAB42093F57B004AE22D /* ForecastModelsFactory.swift */,
+				D612ED71209543B1009EB1DE /* CityObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,7 +236,7 @@
 		D6D5C8F42093D7D600C76E0D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D6D5C90D2093DC9E00C76E0D /* CityListJSON.json */,
+				D612ED7420955C8C009EB1DE /* CityListJSON.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -388,7 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D5C90E2093DC9E00C76E0D /* CityListJSON.json in Resources */,
+				D612ED7520955C8C009EB1DE /* CityListJSON.json in Resources */,
 				D6D5C8D12093D13F00C76E0D /* LaunchScreen.storyboard in Resources */,
 				D6D5C8CE2093D13F00C76E0D /* Assets.xcassets in Resources */,
 				D6D5C90A2093D95100C76E0D /* CityForescast.storyboard in Resources */,
@@ -401,7 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D5C90F2093DC9E00C76E0D /* CityListJSON.json in Resources */,
+				D612ED7620955CAA009EB1DE /* CityListJSON.json in Resources */,
 				D6D5C90B2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,7 +413,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6D5C9102093DC9E00C76E0D /* CityListJSON.json in Resources */,
 				D6D5C90C2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +501,7 @@
 			files = (
 				D6D5C8CC2093D13D00C76E0D /* TheForecast.xcdatamodeld in Sources */,
 				D635FAB52093F57B004AE22D /* ForecastModelsFactory.swift in Sources */,
+				D612ED72209543B1009EB1DE /* CityObject.swift in Sources */,
 				D612ED6F209540C1009EB1DE /* CitySearchTableViewCell.swift in Sources */,
 				D612ED672095275B009EB1DE /* CitySearchViewModel.swift in Sources */,
 				D612ED6B2095277A009EB1DE /* CityDetailViewModel.swift in Sources */,
@@ -519,6 +522,7 @@
 				D635FABA20940608004AE22D /* ForecastServicesTests.swift in Sources */,
 				D635FAB820940597004AE22D /* MockJSON.swift in Sources */,
 				D635FABC20940676004AE22D /* CityWeatherObject.swift in Sources */,
+				D612ED732095458C009EB1DE /* CityObject.swift in Sources */,
 				D6D5C8DC2093D14000C76E0D /* TheForecastTests.swift in Sources */,
 				D635FABB20940673004AE22D /* ForecastModelsFactory.swift in Sources */,
 				D6D5C9072093D93400C76E0D /* CitySearchViewController.swift in Sources */,
