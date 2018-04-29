@@ -28,7 +28,7 @@ class CityDetailViewController: UIViewController {
     @IBOutlet weak var loadingView: UIView!
     
     let detailViewModel: CityDetailViewModel = CityDetailViewModel()
-    var cityId: String = ""
+    var cityObject: CityObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +38,11 @@ class CityDetailViewController: UIViewController {
     
     func dataFromViewModel() {
         loadingView.isHidden = false
-        detailViewModel.cityWeatherById(cityId: cityId) { (error: Error?) in
-            if error == nil {
-                self.setupCityDetail()
+        if let cityId = cityObject?.id {
+            detailViewModel.cityWeatherById(cityId: cityId) { (error: Error?) in
+                if error == nil {
+                    self.setupCityDetail()
+                }
             }
         }
     }
