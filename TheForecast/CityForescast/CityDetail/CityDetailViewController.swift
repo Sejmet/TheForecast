@@ -27,6 +27,10 @@ class CityDetailViewController: UIViewController {
     @IBOutlet weak var cityMapView: MKMapView!
     @IBOutlet weak var loadingView: UIView!
     
+    @IBOutlet weak var nextFiveDaysCollectionView: UICollectionView!
+    @IBOutlet weak var nextFiveDaysSpinnerView: UIActivityIndicatorView!
+    
+    
     let detailViewModel: CityDetailViewModel = CityDetailViewModel()
     var cityObject: CityObject?
     
@@ -34,6 +38,8 @@ class CityDetailViewController: UIViewController {
         super.viewDidLoad()
 
         dataFromViewModel()
+        nextFiveDaysForecast()
+        setupCollectionView()
     }
     
     func dataFromViewModel() {
@@ -67,6 +73,25 @@ class CityDetailViewController: UIViewController {
         cityMapView.addAnnotation(annotation)
     }
     
+    func nextFiveDaysForecast() {
+        nextFiveDaysSpinnerView.isHidden = false
+        if let cityId = cityObject?.id {
+            detailViewModel.weatherForTheNextFiveDays(cityId: cityId) { (error: Error?) in
+                if error == nil {
+                    self.nextFiveDaysCollectionView.reloadData()
+                }
+                self.nextFiveDaysSpinnerView.isHidden = true
+            }
+        }
+    }
+    
+    func setupCollectionView() {
+        nextFiveDaysCollectionView.delegate = self
+        nextFiveDaysCollectionView.dataSource = self
+        
+        nextFiveDaysCollectionView.register(UINib(nibName: "NextDayCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NextDayCollectionViewCell")
+    }
+    
     func setupCityDetail() {
         self.title = detailViewModel.cityName()
         
@@ -94,5 +119,28 @@ class CityDetailViewController: UIViewController {
             pressureTextLabel.text = "Presion:"
             pressureLabel.text = "\(String(describing: pressure))mbar"
         }
+    }
+}
+
+extension CityDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NextDayCollectionViewCell", for: indexPath) as! NextDayCollectionViewCell
+        if let dayOfTheWeather = detailViewModel.nextFiveDaysWeather?.list?[indexPath.row] {
+            cell.setupCellWith(weatherInformation: dayOfTheWeather.weather, temperatureInformation: dayOfTheWeather.main, dateUnix: dayOfTheWeather.dt)
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let days = detailViewModel.nextFiveDaysWeather?.list?.count {
+            return days
+        }
+        
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 100)
     }
 }

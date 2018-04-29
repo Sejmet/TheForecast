@@ -22,6 +22,8 @@
                 <outlet property="maximumTemperatureTextLabel" destination="1NU-7r-PeB" id="Hg8-CT-2nT"/>
                 <outlet property="minimumTemperatureLabel" destination="Xsl-Vh-DKf" id="Aau-p5-cqC"/>
                 <outlet property="minimumTemperatureTextLabel" destination="lUk-y3-cNE" id="N8C-sw-FAC"/>
+                <outlet property="nextFiveDaysCollectionView" destination="ZSb-YJ-N3D" id="AUV-WC-Gv1"/>
+                <outlet property="nextFiveDaysSpinnerView" destination="CWg-qR-JuS" id="gE4-9p-kuN"/>
                 <outlet property="pressureLabel" destination="ClJ-Qi-eUi" id="eTd-xn-tzn"/>
                 <outlet property="pressureTextLabel" destination="8Mc-Rm-cVy" id="f4W-yv-S1G"/>
                 <outlet property="temperatureLabel" destination="Uqr-yC-KC0" id="Ijn-NQ-Njc"/>
@@ -38,7 +40,7 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTN-5S-ama" userLabel="DataContainerView">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="256"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-1w-bVO" userLabel="WeatherImageView">
                                     <rect key="frame" x="20" y="20" width="100" height="100"/>
@@ -107,16 +109,47 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-kW-yhL" userLabel="NextFiveDaysForecast">
+                                    <rect key="frame" x="0.0" y="156" width="375" height="100"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZSb-YJ-N3D" userLabel="NextFiveDaysCollectionView">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1rg-Gq-1hB">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CWg-qR-JuS">
+                                            <rect key="frame" x="178" y="40" width="20" height="20"/>
+                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="ZSb-YJ-N3D" firstAttribute="leading" secondItem="hdK-kW-yhL" secondAttribute="leading" id="0o4-H9-tmq"/>
+                                        <constraint firstAttribute="height" constant="100" id="D0b-6e-uyT"/>
+                                        <constraint firstItem="CWg-qR-JuS" firstAttribute="centerY" secondItem="hdK-kW-yhL" secondAttribute="centerY" id="JHk-Zz-Mb5"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZSb-YJ-N3D" secondAttribute="bottom" id="T2B-AL-yAm"/>
+                                        <constraint firstItem="CWg-qR-JuS" firstAttribute="centerX" secondItem="hdK-kW-yhL" secondAttribute="centerX" id="Yg3-3u-nyY"/>
+                                        <constraint firstItem="ZSb-YJ-N3D" firstAttribute="top" secondItem="hdK-kW-yhL" secondAttribute="top" id="v7i-RC-AAb"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZSb-YJ-N3D" secondAttribute="trailing" id="wU2-XZ-oyx"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="1NU-7r-PeB" firstAttribute="top" secondItem="lUk-y3-cNE" secondAttribute="bottom" constant="4" id="4aT-Lt-CFP"/>
                                 <constraint firstItem="ClJ-Qi-eUi" firstAttribute="centerY" secondItem="8Mc-Rm-cVy" secondAttribute="centerY" id="8f0-em-lKG"/>
+                                <constraint firstAttribute="trailing" secondItem="hdK-kW-yhL" secondAttribute="trailing" id="9gW-jG-tjc"/>
                                 <constraint firstItem="fCe-bK-cgv" firstAttribute="leading" secondItem="Uqr-yC-KC0" secondAttribute="trailing" constant="8" symbolic="YES" id="9jX-5s-EHm"/>
                                 <constraint firstItem="Uqr-yC-KC0" firstAttribute="top" secondItem="WoY-1w-bVO" secondAttribute="top" id="B8M-wl-lTp"/>
                                 <constraint firstItem="Uqr-yC-KC0" firstAttribute="leading" secondItem="WoY-1w-bVO" secondAttribute="trailing" constant="8" symbolic="YES" id="CLQ-q8-dvr"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uqr-yC-KC0" secondAttribute="trailing" constant="20" symbolic="YES" id="Dw5-dt-4aV"/>
                                 <constraint firstItem="fhJ-JI-VlH" firstAttribute="centerY" secondItem="5M9-AX-E7E" secondAttribute="centerY" id="Ejt-f0-5KE"/>
+                                <constraint firstItem="hdK-kW-yhL" firstAttribute="top" secondItem="8Mc-Rm-cVy" secondAttribute="bottom" constant="8" symbolic="YES" id="HQk-lY-wss"/>
                                 <constraint firstItem="u1h-ug-02M" firstAttribute="leading" secondItem="1NU-7r-PeB" secondAttribute="trailing" constant="8" symbolic="YES" id="K1R-Zm-v3e"/>
                                 <constraint firstItem="8Mc-Rm-cVy" firstAttribute="top" secondItem="5M9-AX-E7E" secondAttribute="bottom" constant="8" symbolic="YES" id="P0C-cy-9Tb"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xsl-Vh-DKf" secondAttribute="trailing" constant="20" symbolic="YES" id="PIW-cS-wbj"/>
@@ -124,8 +157,8 @@
                                 <constraint firstItem="u1h-ug-02M" firstAttribute="centerY" secondItem="1NU-7r-PeB" secondAttribute="centerY" id="akB-vP-Q73"/>
                                 <constraint firstItem="WoY-1w-bVO" firstAttribute="leading" secondItem="OTN-5S-ama" secondAttribute="leading" constant="20" symbolic="YES" id="bVy-ry-OAt"/>
                                 <constraint firstItem="8Mc-Rm-cVy" firstAttribute="leading" secondItem="5M9-AX-E7E" secondAttribute="leading" id="bvs-kc-g2e"/>
-                                <constraint firstAttribute="bottom" secondItem="8Mc-Rm-cVy" secondAttribute="bottom" constant="20" symbolic="YES" id="cgf-Es-kmc"/>
                                 <constraint firstItem="fCe-bK-cgv" firstAttribute="top" secondItem="Uqr-yC-KC0" secondAttribute="top" id="dNo-cu-ZCr"/>
+                                <constraint firstItem="hdK-kW-yhL" firstAttribute="leading" secondItem="OTN-5S-ama" secondAttribute="leading" id="fHc-86-dTq"/>
                                 <constraint firstItem="lUk-y3-cNE" firstAttribute="leading" secondItem="Uqr-yC-KC0" secondAttribute="leading" id="fdO-Qi-ug5"/>
                                 <constraint firstItem="WoY-1w-bVO" firstAttribute="top" secondItem="OTN-5S-ama" secondAttribute="top" constant="20" symbolic="YES" id="kc3-CD-Wau"/>
                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u1h-ug-02M" secondAttribute="trailing" constant="20" symbolic="YES" id="lIb-JE-CuN"/>
@@ -136,10 +169,11 @@
                                 <constraint firstItem="1NU-7r-PeB" firstAttribute="leading" secondItem="lUk-y3-cNE" secondAttribute="leading" id="s6B-s6-V9q"/>
                                 <constraint firstItem="lUk-y3-cNE" firstAttribute="top" secondItem="Uqr-yC-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="sEx-DJ-shz"/>
                                 <constraint firstItem="5M9-AX-E7E" firstAttribute="leading" secondItem="WoY-1w-bVO" secondAttribute="leading" id="vi9-qC-kYB"/>
+                                <constraint firstAttribute="bottom" secondItem="hdK-kW-yhL" secondAttribute="bottom" id="xeo-o3-zSS"/>
                             </constraints>
                         </view>
                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F9D-R8-wNp" userLabel="CityMapView">
-                            <rect key="frame" x="0.0" y="168" width="375" height="479"/>
+                            <rect key="frame" x="0.0" y="256" width="375" height="391"/>
                         </mapView>
                         <view hidden="YES" alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8l-oV-21N" userLabel="LoadingView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
