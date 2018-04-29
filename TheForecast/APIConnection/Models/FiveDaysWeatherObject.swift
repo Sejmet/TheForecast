@@ -14,7 +14,7 @@ public struct FiveDaysWeatherObject: Decodable {
 }
 
 public struct WeatherListObject: Decodable {
-    public let dt: Int?
+    public let dt: Double?
     public let main: MainObject?
-    public let weather: WeatherObject?
+    public let weather: [WeatherObject]?
 }
