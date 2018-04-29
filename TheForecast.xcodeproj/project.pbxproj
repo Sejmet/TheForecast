@@ -66,6 +66,12 @@
 		D6F86F0B2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */; };
 		D6F86F0C2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */; };
 		D6F86F0D2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */; };
+		D6F86F112096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */; };
+		D6F86F122096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */; };
+		D6F86F132096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */; };
+		D6F86F142096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */; };
+		D6F86F152096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */; };
+		D6F86F162096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +130,8 @@
 		D6F86EEF2096459200228A1D /* LittleCityList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LittleCityList.json; sourceTree = "<group>"; };
 		D6F86F0220965F9900228A1D /* CoreDataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelManager.swift; sourceTree = "<group>"; };
 		D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysWeatherObject.swift; sourceTree = "<group>"; };
+		D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDayCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextDayCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +298,7 @@
 		D6D5C9042093D91100C76E0D /* CityDetail */ = {
 			isa = PBXGroup;
 			children = (
+				D6F86F0E2096805E00228A1D /* NextDayCollectionViewCell */,
 				D612ED682095276E009EB1DE /* CityDetailViewController.swift */,
 				D612ED6A2095277A009EB1DE /* CityDetailViewModel.swift */,
 				D6E8C2272095704500ACBAD3 /* CityDetailViewController.xib */,
@@ -303,6 +312,15 @@
 				D6F86F0220965F9900228A1D /* CoreDataModelManager.swift */,
 			);
 			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		D6F86F0E2096805E00228A1D /* NextDayCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */,
+				D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */,
+			);
+			path = NextDayCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		E2AD26C63BA7FB0EDBB3E4AC /* Pods */ = {
@@ -431,6 +449,7 @@
 				D6F86EF02096459200228A1D /* LittleCityList.json in Resources */,
 				D6D5C90A2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 				D612ED70209540C1009EB1DE /* CitySearchTableViewCell.xib in Resources */,
+				D6F86F142096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */,
 				D6E8C2282095704500ACBAD3 /* CityDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E8C22B209570D400ACBAD3 /* CityDetailViewController.xib in Resources */,
+				D6F86F152096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */,
 				D6E8C22420956E7400ACBAD3 /* CitySearchTableViewCell.xib in Resources */,
 				D6F86EF12096459200228A1D /* LittleCityList.json in Resources */,
 				D6D5C90B2093D95100C76E0D /* CityForescast.storyboard in Resources */,
@@ -451,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E8C22620956E7400ACBAD3 /* CitySearchTableViewCell.xib in Resources */,
+				D6F86F162096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */,
 				D6D5C90C2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 				D6F86EF22096459200228A1D /* LittleCityList.json in Resources */,
 				D6E8C22E209570D500ACBAD3 /* CityDetailViewController.xib in Resources */,
@@ -550,6 +571,7 @@
 				D6D5C8C42093D13D00C76E0D /* AppDelegate.swift in Sources */,
 				D635FABD20941147004AE22D /* MockJSON.swift in Sources */,
 				D635FAB12093EE7F004AE22D /* ForecastServices.swift in Sources */,
+				D6F86F112096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */,
 				D6F86F0320965F9900228A1D /* CoreDataModelManager.swift in Sources */,
 				D6F86F0B2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */,
 				D6D5C9062093D93400C76E0D /* CitySearchViewController.swift in Sources */,
@@ -574,6 +596,7 @@
 				D6D5C8DC2093D14000C76E0D /* TheForecastTests.swift in Sources */,
 				D635FABB20940673004AE22D /* ForecastModelsFactory.swift in Sources */,
 				D6D5C9072093D93400C76E0D /* CitySearchViewController.swift in Sources */,
+				D6F86F122096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */,
 				D6E8C21A20956D7300ACBAD3 /* CitySearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +615,7 @@
 				D6E8C22C209570D500ACBAD3 /* CityDetailViewController.swift in Sources */,
 				D6F86F0520965F9900228A1D /* CoreDataModelManager.swift in Sources */,
 				D6E8C21C20956E1A00ACBAD3 /* CityObject.swift in Sources */,
+				D6F86F132096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */,
 				D6E8C21E20956E1F00ACBAD3 /* ForecastModelsFactory.swift in Sources */,
 				D6E8C230209571BB00ACBAD3 /* ForecastServices.swift in Sources */,
 				D6E8C22520956E7400ACBAD3 /* CitySearchTableViewCell.swift in Sources */,
