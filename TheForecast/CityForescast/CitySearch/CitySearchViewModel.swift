@@ -10,4 +10,14 @@ import UIKit
 
 class CitySearchViewModel: NSObject {
 
+    var cityArray: [CityObject] = []
+    var filteredCityArray: [CityObject] = []
+    
+    func populateCityArray() {
+        
+    }
+    
+    func filterCityByName(cityName: String) {
+        filteredCityArray = cityArray.filter { return ($0.name?.localizedCaseInsensitiveContains("cityName"))! }
+    }
 }
