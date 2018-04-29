@@ -51,13 +51,18 @@ class CitySearchViewModel: NSObject {
         
         do {
             let result = try context.fetch(request)
-            if let resultArray = result as? [CityObject] {
+            if let resultArray = result as? [NSManagedObject] {
                 for city in resultArray {
-                    self.coreDataCityArray.append(city)
+                    let id = city.value(forKey: "id") as? Int
+                    let name = city.value(forKey: "name") as? String
+                    let country = city.value(forKey: "country") as? String
+                    let cityObject = CityObject(id: id, name: name, country: country, coord: nil)
+                    
+                    coreDataCityArray.append(cityObject)
                 }
             }
         } catch {
-            print("Failed")
+            print("Fail trying to read Core Data")
         }
     }
     
@@ -68,15 +73,42 @@ class CitySearchViewModel: NSObject {
         
         let context = appDelegate.persistentContainer.viewContext
         
-        checkFivePersistObject()
+        if !isPersisted(cityObject: cityObject) {
+            checkFivePersistObject()
+            
+            let cityEntity = NSEntityDescription.entity(forEntityName: "City", in: context)
+            let newCity = NSManagedObject(entity: cityEntity!, insertInto: context)
+            newCity.setValue(cityObject.id, forKey: "id")
+            newCity.setValue(cityObject.name, forKey: "name")
+            newCity.setValue(cityObject.country, forKey: "country")
+            
+            saveCoreDataContext()
+        }
+    }
+    
+    func isPersisted(cityObject: CityObject) -> Bool {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return false
+        }
         
-        let cityEntity = NSEntityDescription.entity(forEntityName: "City", in: context)
-        let newCity = NSManagedObject(entity: cityEntity!, insertInto: context)
-        newCity.setValue(cityObject.id, forKey: "id")
-        newCity.setValue(cityObject.name, forKey: "name")
-        newCity.setValue(cityObject.country, forKey: "country")
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
+        request.returnsObjectsAsFaults = false
+
+        do {
+            let result = try context.fetch(request)
+            if let resultArray = result as? [NSManagedObject] {
+                for city in resultArray {
+                    if cityObject.id == city.value(forKey: "id") as? Int {
+                        return true
+                    }
+                }
+            }
+        } catch {
+            print("Fail trying to read Core Data")
+        }
         
-        saveCoreDataContext()
+        return false
     }
     
     func checkFivePersistObject() {
