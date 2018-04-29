@@ -8,6 +8,13 @@
 
 import UIKit
 
-class FiveDaysWeatherObject: NSObject {
+public struct FiveDaysWeatherObject: Decodable {
+    public let city: CityObject?
+    public let list: [WeatherListObject]?
+}
 
+public struct WeatherListObject: Decodable {
+    public let dt: Int?
+    public let main: MainObject?
+    public let weather: WeatherObject?
 }
