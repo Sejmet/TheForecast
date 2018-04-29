@@ -25,7 +25,7 @@ class CitySearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        searchViewModel.populateCoreDataCityArray()
+        searchViewModel.populateRecentCityArray()
     }
 
     func setupTableView() {
@@ -71,7 +71,7 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
         if showFilteredCities {
             return searchViewModel.filteredCityArray.count
         } else {
-            return searchViewModel.coreDataCityArray.count
+            return searchViewModel.recentCityArray.count
         }
     }
     
@@ -80,7 +80,7 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
         if showFilteredCities {
             cell.setupCellWith(cityName: searchViewModel.filteredCityArray[indexPath.row].name)
         } else {
-            cell.setupCellWith(cityName: searchViewModel.coreDataCityArray[indexPath.row].name)
+            cell.setupCellWith(cityName: searchViewModel.recentCityArray[indexPath.row].name)
         }
         
         return cell
@@ -93,7 +93,7 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
             detailVC.cityObject = searchViewModel.filteredCityArray[indexPath.row]
             searchViewModel.persistCity(cityObject: searchViewModel.filteredCityArray[indexPath.row])
         } else {
-            detailVC.cityObject = searchViewModel.coreDataCityArray[indexPath.row]
+            detailVC.cityObject = searchViewModel.recentCityArray[indexPath.row]
         }
         
         navigationController?.pushViewController(detailVC, animated: true)
@@ -102,7 +102,7 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             searchViewModel.deleteCityFromPersistedModel(cityIndex: indexPath.row)
-            searchViewModel.deleteCityFromCoreDataCityArray(cityIndex: indexPath.row)
+            searchViewModel.deleteCityFromRecentCityArray(cityIndex: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
