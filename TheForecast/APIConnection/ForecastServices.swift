@@ -12,16 +12,30 @@ import Alamofire
 class ForecastServices: NSObject {
 
     private var openWeatherApiKey: String = "4222c0a1f7e408da4efdf0b691a662a4"
-    private var apiHost: String = "https://api.openweathermap.org/data/2.5/weather?"
+    private var apiHost: String = "https://api.openweathermap.org/data/2.5/"
     private var forecastFactory: ForecastModelsFactory = ForecastModelsFactory()
     
     public func cityWeatherById(cityId: Int, completion: @escaping (_ cityObject: CityWeatherObject?, _ error: Error?) -> Void) {
-        let urlString: String = "\(apiHost)id=\(cityId)&appid=\(openWeatherApiKey)&units=metric"
+        let urlString: String = "weather?\(apiHost)id=\(cityId)&appid=\(openWeatherApiKey)&units=metric"
         if let url: URL = URL(string: urlString) {
             Alamofire.request(url).responseJSON { (response: DataResponse<Any>) in
                 if let data = response.data {
                     let cityWeatherObject = self.forecastFactory.makeCityWeatherObject(json: data)
                     completion(cityWeatherObject, response.error)
+                } else {
+                    completion(nil, response.error)
+                }
+            }
+        }
+    }
+    
+    public func cityWeatherForNext5DaysById(cityId: Int, completion: @escaping (_ fiveDaysWeatherObject: FiveDaysWeatherObject?, _ error: Error?) -> Void) {
+        let urlString: String = "forecast?\(apiHost)id=\(cityId)&appid=\(openWeatherApiKey)&units=metric"
+        if let url: URL = URL(string: urlString) {
+            Alamofire.request(url).responseJSON { (response: DataResponse<Any>) in
+                if let data = response.data {
+                    let fiveDaysWeatherObject = self.forecastFactory.makeFiveDaysWeatherObject(json: data)
+                    completion(fiveDaysWeatherObject, response.error)
                 } else {
                     completion(nil, response.error)
                 }
