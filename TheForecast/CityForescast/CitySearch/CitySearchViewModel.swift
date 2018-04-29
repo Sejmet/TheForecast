@@ -17,6 +17,9 @@ class CitySearchViewModel: NSObject {
     
     private var forecastFactory: ForecastModelsFactory = ForecastModelsFactory()
     
+    /**
+     Read json file and populate an array with city objects.
+     */
     func populateCityArray() {
         cityArray = []
         if let path = Bundle.main.path(forResource: "LittleCityList", ofType: "json") {
@@ -42,6 +45,9 @@ class CitySearchViewModel: NSObject {
         coreDataCityArray.remove(at: cityIndex)
     }
     
+    /**
+     Read core data model and populate an array with city objects.
+     */
     func populateCoreDataCityArray() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -70,6 +76,9 @@ class CitySearchViewModel: NSObject {
         }
     }
     
+    /**
+     Persist city selected by user.
+     */
     func persistCity(cityObject: CityObject) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -90,6 +99,9 @@ class CitySearchViewModel: NSObject {
         }
     }
     
+    /**
+     Check if the city is persisted in core data model to no add the same city twice.
+     */
     private func isPersisted(cityObject: CityObject) -> Bool {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return false
@@ -115,6 +127,11 @@ class CitySearchViewModel: NSObject {
         return false
     }
     
+    /**
+    The core data limit to save cities is 5.
+    So if the user select a new city that it is not in the core data model,
+    delete the oldest one to add the new one.
+    */
     private func checkFivePersistObject() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -175,7 +192,7 @@ class CitySearchViewModel: NSObject {
         do {
             try context.save()
         } catch {
-            print("Failed saving")
+            print("Fail trying to save context")
         }
     }
 }
