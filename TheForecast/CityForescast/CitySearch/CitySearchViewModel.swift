@@ -128,7 +128,32 @@ class CitySearchViewModel: NSObject {
                 }
             }
         } catch {
-            print("Failed")
+            print("Fail trying to read Core Data")
+        }
+        
+        saveCoreDataContext()
+    }
+    
+    func deleteCityFromCoreData(cityObject: CityObject) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            if let resultArray = result as? [NSManagedObject] {
+                for city in resultArray {
+                    if cityObject.id == city.value(forKey: "id") as? Int {
+                        context.delete(city)
+                    }
+                }
+            }
+        } catch {
+            print("Fail trying to read Core Data")
         }
         
         saveCoreDataContext()
