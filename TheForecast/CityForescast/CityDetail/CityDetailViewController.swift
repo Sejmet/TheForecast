@@ -68,6 +68,8 @@ class CityDetailViewController: UIViewController {
     }
     
     func setupCityDetail() {
+        self.title = detailViewModel.cityName()
+        
         if let temperature = detailViewModel.temperature() {
             temperatureLabel.text = "\(String(describing: round(temperature)))"
             celsiusTextLabel.text = "°C"
