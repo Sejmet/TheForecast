@@ -40,15 +40,34 @@ class CityDetailViewController: UIViewController {
         loadingView.isHidden = false
         if let cityId = cityObject?.id {
             detailViewModel.cityWeatherById(cityId: cityId) { (error: Error?) in
+                self.loadingView.isHidden = true
                 if error == nil {
                     self.setupCityDetail()
+                    self.setupMapView()
                 }
             }
         }
     }
     
+    func setupMapView() {
+        guard let latitude = detailViewModel.latitudeCoordinate() else {
+            return
+        }
+        
+        guard let longitude = detailViewModel.longitudeCoordinate() else {
+            return
+        }
+        
+        let location = CLLocationCoordinate2DMake(latitude, longitude)
+        let span = MKCoordinateSpanMake(0.1, 0.1)
+        let region = MKCoordinateRegionMake(location, span)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        cityMapView.setRegion(region, animated: true)
+        cityMapView.addAnnotation(annotation)
+    }
+    
     func setupCityDetail() {
-        self.loadingView.isHidden = false
         if let temperature = detailViewModel.temperature() {
             temperatureLabel.text = "\(String(describing: round(temperature)))"
             celsiusTextLabel.text = "°C"
@@ -56,12 +75,12 @@ class CityDetailViewController: UIViewController {
         
         if let minTemperature = detailViewModel.minimumTemperature() {
             minimumTemperatureTextLabel.text = "Minima:"
-            minimumTemperatureLabel.text = "\(String(describing: minTemperature)) C"
+            minimumTemperatureLabel.text = "\(String(describing: round(minTemperature))) C"
         }
 
         if let maxTemperature = detailViewModel.maximumTemperature() {
             maximumTemperatureTextLabel.text = "Maxima:"
-            maximumTemperatureLabel.text = "\(String(describing: maxTemperature)) C"
+            maximumTemperatureLabel.text = "\(String(describing: round(maxTemperature))) C"
         }
         
         if let humidity = detailViewModel.humidity() {

@@ -38,71 +38,71 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTN-5S-ama" userLabel="DataContainerView">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WoY-1w-bVO" userLabel="WeatherImageView">
-                                    <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                    <rect key="frame" x="20" y="20" width="100" height="100"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="80" id="EBu-y7-XIw"/>
-                                        <constraint firstAttribute="width" constant="80" id="uVb-2E-t0d"/>
+                                        <constraint firstAttribute="height" constant="100" id="EBu-y7-XIw"/>
+                                        <constraint firstAttribute="width" constant="100" id="uVb-2E-t0d"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqr-yC-KC0" userLabel="TemperatureLabel">
-                                    <rect key="frame" x="108" y="20" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="128" y="20" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCe-bK-cgv" userLabel="CelsiusTextLabel">
-                                    <rect key="frame" x="116" y="20" width="0.0" height="0.0"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="136" y="20" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUk-y3-cNE" userLabel="MinimumTemperatureTextLabel">
-                                    <rect key="frame" x="108" y="28" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="128" y="28" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsl-Vh-DKf" userLabel="MinimumTemperatureLabel">
-                                    <rect key="frame" x="116" y="28.5" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="136" y="28.5" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NU-7r-PeB" userLabel="MaximumTemperatureTextLabel">
-                                    <rect key="frame" x="108" y="32" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="128" y="32" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1h-ug-02M" userLabel="MaximumTemperatureLabel">
-                                    <rect key="frame" x="116" y="32.5" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="136" y="32.5" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M9-AX-E7E" userLabel="HumidityTextLabel">
-                                    <rect key="frame" x="20" y="108" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="20" y="140" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhJ-JI-VlH" userLabel="HumidityLabel">
-                                    <rect key="frame" x="28" y="108" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="28" y="140" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mc-Rm-cVy" userLabel="PressureTextLabel">
-                                    <rect key="frame" x="20" y="116" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="20" y="148" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClJ-Qi-eUi" userLabel="PressureLabel">
-                                    <rect key="frame" x="28" y="116" width="0.0" height="0.0"/>
+                                    <rect key="frame" x="28" y="148" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -132,14 +132,14 @@
                                 <constraint firstItem="fhJ-JI-VlH" firstAttribute="leading" secondItem="5M9-AX-E7E" secondAttribute="trailing" constant="8" symbolic="YES" id="lhF-U4-5RX"/>
                                 <constraint firstItem="Xsl-Vh-DKf" firstAttribute="leading" secondItem="lUk-y3-cNE" secondAttribute="trailing" constant="8" symbolic="YES" id="oh2-gB-3LB"/>
                                 <constraint firstItem="ClJ-Qi-eUi" firstAttribute="leading" secondItem="8Mc-Rm-cVy" secondAttribute="trailing" constant="8" symbolic="YES" id="qjA-iG-mAS"/>
-                                <constraint firstItem="5M9-AX-E7E" firstAttribute="top" secondItem="WoY-1w-bVO" secondAttribute="bottom" constant="8" symbolic="YES" id="rhz-zy-xhh"/>
+                                <constraint firstItem="5M9-AX-E7E" firstAttribute="top" secondItem="WoY-1w-bVO" secondAttribute="bottom" constant="20" id="rhz-zy-xhh"/>
                                 <constraint firstItem="1NU-7r-PeB" firstAttribute="leading" secondItem="lUk-y3-cNE" secondAttribute="leading" id="s6B-s6-V9q"/>
                                 <constraint firstItem="lUk-y3-cNE" firstAttribute="top" secondItem="Uqr-yC-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="sEx-DJ-shz"/>
                                 <constraint firstItem="5M9-AX-E7E" firstAttribute="leading" secondItem="WoY-1w-bVO" secondAttribute="leading" id="vi9-qC-kYB"/>
                             </constraints>
                         </view>
                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F9D-R8-wNp" userLabel="CityMapView">
-                            <rect key="frame" x="0.0" y="136" width="375" height="511"/>
+                            <rect key="frame" x="0.0" y="168" width="375" height="479"/>
                         </mapView>
                         <view hidden="YES" alpha="0.60000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8l-oV-21N" userLabel="LoadingView">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
