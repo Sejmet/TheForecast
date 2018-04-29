@@ -12,7 +12,7 @@ class CitySearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cityNameLabel: UILabel!
     
-    func setupCellWith(cityName: String) {
+    func setupCellWith(cityName: String?) {
         cityNameLabel.text = cityName
     }
     
