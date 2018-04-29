@@ -14,12 +14,14 @@ class CitySearchViewController: UIViewController {
     @IBOutlet weak var cityTableView: UITableView!
     
     let searchViewModel: CitySearchViewModel = CitySearchViewModel()
+    var showFilteredCities: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
         setupSearchBar()
+        searchViewModel.populateCoreDataCityArray()
     }
 
     func setupTableView() {
@@ -36,39 +38,60 @@ class CitySearchViewController: UIViewController {
         searchViewModel.populateCityArray()
         citySearchBar.delegate = self
     }
-
 }
 
 extension CitySearchViewController: UISearchBarDelegate {
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        if let searchText = searchBar.text {
+            showFilteredCities = true
+            searchViewModel.filterCityByName(cityName: searchText)
+            cityTableView.reloadData()
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchViewModel.filterCityByName(cityName: searchText)
-        cityTableView.reloadData()
+        if searchText == "" {
+            showFilteredCities = false
+            cityTableView.reloadData()
+        } else {
+            showFilteredCities = true
+            searchViewModel.filterCityByName(cityName: searchText)
+            cityTableView.reloadData()
+        }
     }
 }
 
 extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchViewModel.filteredCityArray.count
+        if showFilteredCities {
+            return searchViewModel.filteredCityArray.count
+        } else {
+            return searchViewModel.coreDataCityArray.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CitySearchTableViewCell", for: indexPath) as! CitySearchTableViewCell
+        if showFilteredCities {
+            cell.setupCellWith(cityName: searchViewModel.filteredCityArray[indexPath.row].name)
+        } else {
+            cell.setupCellWith(cityName: searchViewModel.coreDataCityArray[indexPath.row].name)
+        }
         
-        cell.setupCellWith(cityName: searchViewModel.filteredCityArray[indexPath.row].name)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = CityDetailViewController(nibName: "CityDetailViewController", bundle: nil)
-        detailVC.cityObject = searchViewModel.filteredCityArray[indexPath.row]
+        
+        if showFilteredCities {
+            detailVC.cityObject = searchViewModel.filteredCityArray[indexPath.row]
+            searchViewModel.persistCity(cityObject: searchViewModel.filteredCityArray[indexPath.row])
+        } else {
+            detailVC.cityObject = searchViewModel.coreDataCityArray[indexPath.row]
+        }
+        
         navigationController?.pushViewController(detailVC, animated: true)
     }
 }
