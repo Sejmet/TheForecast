@@ -19,12 +19,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="QWz-Rd-8o9" kind="relationship" relationship="rootViewController" id="DJd-JH-cRz"/>
+                        <segue destination="QWz-Rd-8o9" kind="relationship" relationship="rootViewController" id="k9x-h7-Ohn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paY-L9-4aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1022" y="123"/>
+            <point key="canvasLocation" x="-2022" y="809"/>
         </scene>
         <!--City Search View Controller-->
         <scene sceneID="LiB-Vb-2GV">
@@ -63,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ry1-p5-Jwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="123"/>
+            <point key="canvasLocation" x="-1337" y="808"/>
         </scene>
     </scenes>
 </document>
