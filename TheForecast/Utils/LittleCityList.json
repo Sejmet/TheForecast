@@ -1,0 +1,652 @@
+{
+  "city": [
+   {
+    "id": 3840224,
+    "name": "Pueblo Buena Parada",
+    "country": "AR",
+    "coord": {
+      "lon": -64.033333,
+      "lat": -39.01667
+    }
+  },
+  {
+    "id": 3435907,
+    "name": "Provincia de Buenos Aires",
+    "country": "AR",
+    "coord": {
+      "lon": -60,
+      "lat": -36
+    }
+  },
+  {
+    "id": 3839982,
+    "name": "Punta Alta",
+    "country": "AR",
+    "coord": {
+      "lon": -62.073589,
+      "lat": -38.875881
+    }
+  },
+  {
+    "id": 3435189,
+    "name": "Cristiano Muerto",
+    "country": "AR",
+    "coord": {
+      "lon": -59.604549,
+      "lat": -38.647781
+    }
+  },
+  {
+    "id": 3430443,
+    "name": "Necochea",
+    "country": "AR",
+    "coord": {
+      "lon": -58.736752,
+      "lat": -38.54726
+    }
+  },
+  {
+    "id": 3430668,
+    "name": "Miramar",
+    "country": "AR",
+    "coord": {
+      "lon": -57.836689,
+      "lat": -38.268761
+    }
+  },
+  {
+    "id": 3427840,
+    "name": "Tamangueyú",
+    "country": "AR",
+    "coord": {
+      "lon": -58.740608,
+      "lat": -38.204819
+    }
+  },
+  {
+    "id": 3439705,
+    "name": "Oriental Republic of Uruguay",
+    "country": "UY",
+    "coord": {
+      "lon": -56,
+      "lat": -33
+    }
+  },
+  {
+    "id": 3441890,
+    "name": "Departamento de Maldonado",
+    "country": "UY",
+    "coord": {
+      "lon": -54.916672,
+      "lat": -34.666672
+    }
+  },
+  {
+    "id": 3427473,
+    "name": "Villa Altube",
+    "country": "AR",
+    "coord": {
+      "lon": -58.746559,
+      "lat": -34.52647
+    }
+  },
+  {
+    "id": 3443411,
+    "name": "Departamento de Canelones",
+    "country": "UY",
+    "coord": {
+      "lon": -56.288609,
+      "lat": -34.64444
+    }
+  },
+  {
+    "id": 6072606,
+    "name": "Miami",
+    "country": "CA",
+    "coord": {
+      "lon": -98.244659,
+      "lat": 49.371101
+    }
+  },
+  {
+    "id": 5106279,
+    "name": "West Milford",
+    "country": "US",
+    "coord": {
+      "lon": -74.367371,
+      "lat": 41.13121
+    }
+  },
+  {
+    "id": 5106292,
+    "name": "West New York",
+    "country": "US",
+    "coord": {
+      "lon": -74.014313,
+      "lat": 40.78788
+    }
+  },
+  {
+    "id": 5106298,
+    "name": "West Orange",
+    "country": "US",
+    "coord": {
+      "lon": -74.239037,
+      "lat": 40.79871
+    }
+  },
+  {
+    "id": 5106331,
+    "name": "Westfield",
+    "country": "US",
+    "coord": {
+      "lon": -74.347366,
+      "lat": 40.658989
+    }
+  },
+  {
+    "id": 5106453,
+    "name": "Willingboro",
+    "country": "US",
+    "coord": {
+      "lon": -74.869049,
+      "lat": 40.027889
+    }
+  },
+  {
+    "id": 5106529,
+    "name": "Woodbridge",
+    "country": "US",
+    "coord": {
+      "lon": -74.284592,
+      "lat": 40.557598
+    }
+  },
+  {
+    "id": 5106615,
+    "name": "Wyckoff",
+    "country": "US",
+    "coord": {
+      "lon": -74.17292,
+      "lat": 41.009541
+    }
+  },
+  {
+    "id": 5106834,
+    "name": "Albany",
+    "country": "US",
+    "coord": {
+      "lon": -73.756233,
+      "lat": 42.65258
+    }
+  },
+  {
+    "id": 5107760,
+    "name": "Baldwin",
+    "country": "US",
+    "coord": {
+      "lon": -73.609299,
+      "lat": 40.65649
+    }
+  },
+  {
+    "id": 5108093,
+    "name": "Batavia",
+    "country": "US",
+    "coord": {
+      "lon": -78.187523,
+      "lat": 42.998119
+    }
+  },
+  {
+    "id": 5108169,
+    "name": "Bay Shore",
+    "country": "US",
+    "coord": {
+      "lon": -73.245392,
+      "lat": 40.725101
+    }
+  },
+  {
+    "id": 5108219,
+    "name": "Beacon",
+    "country": "US",
+    "coord": {
+      "lon": -73.969582,
+      "lat": 41.504822
+    }
+  },
+  {
+    "id": 5108707,
+    "name": "Bellmore",
+    "country": "US",
+    "coord": {
+      "lon": -73.527069,
+      "lat": 40.668709
+    }
+  },
+  {
+    "id": 5108815,
+    "name": "Bensonhurst",
+    "country": "US",
+    "coord": {
+      "lon": -73.994034,
+      "lat": 40.601768
+    }
+  },
+  {
+    "id": 5108955,
+    "name": "Bethpage",
+    "country": "US",
+    "coord": {
+      "lon": -73.482071,
+      "lat": 40.74427
+    }
+  },
+  {
+    "id": 5109177,
+    "name": "Binghamton",
+    "country": "US",
+    "coord": {
+      "lon": -75.917969,
+      "lat": 42.09869
+    }
+  },
+  {
+    "id": 5110077,
+    "name": "Brentwood",
+    "country": "US",
+    "coord": {
+      "lon": -73.246231,
+      "lat": 40.781212
+    }
+  },
+  {
+    "id": 5110159,
+    "name": "Brighton",
+    "country": "US",
+    "coord": {
+      "lon": -77.550552,
+      "lat": 43.14756
+    }
+  },
+  {
+    "id": 5110302,
+    "name": "Brooklyn",
+    "country": "US",
+    "coord": {
+      "lon": -73.949577,
+      "lat": 40.650101
+    }
+  },
+  {
+    "id": 5110629,
+    "name": "Buffalo",
+    "country": "US",
+    "coord": {
+      "lon": -78.878372,
+      "lat": 42.886452
+    }
+  },
+  {
+    "id": 5112375,
+    "name": "Cheektowaga",
+    "country": "US",
+    "coord": {
+      "lon": -78.754753,
+      "lat": 42.903389
+    }
+  },
+  {
+    "id": 5113142,
+    "name": "Cohoes",
+    "country": "US",
+    "coord": {
+      "lon": -73.700119,
+      "lat": 42.774239
+    }
+  },
+  {
+    "id": 5113412,
+    "name": "Commack",
+    "country": "US",
+    "coord": {
+      "lon": -73.292892,
+      "lat": 40.84288
+    }
+  },
+  {
+    "id": 5113481,
+    "name": "Coney Island",
+    "country": "US",
+    "coord": {
+      "lon": -73.994034,
+      "lat": 40.577881
+    }
+  },
+  {
+    "id": 5113683,
+    "name": "Copiague",
+    "country": "US",
+    "coord": {
+      "lon": -73.399841,
+      "lat": 40.681492
+    }
+  },
+  {
+    "id": 5113694,
+    "name": "Coram",
+    "country": "US",
+    "coord": {
+      "lon": -73.001488,
+      "lat": 40.86871
+    }
+  },
+  {
+    "id": 5114731,
+    "name": "Deer Park",
+    "country": "US",
+    "coord": {
+      "lon": -73.329292,
+      "lat": 40.761768
+    }
+  },
+  {
+    "id": 5114900,
+    "name": "Depew",
+    "country": "US",
+    "coord": {
+      "lon": -78.692253,
+      "lat": 42.90395
+    }
+  },
+  {
+    "id": 5115107,
+    "name": "Dix Hills",
+    "country": "US",
+    "coord": {
+      "lon": -73.336227,
+      "lat": 40.804821
+    }
+  },
+  {
+    "id": 5115960,
+    "name": "East Meadow",
+    "country": "US",
+    "coord": {
+      "lon": -73.559021,
+      "lat": 40.713989
+    }
+  },
+  {
+    "id": 5115962,
+    "name": "East Massapequa",
+    "country": "US",
+    "coord": {
+      "lon": -73.436508,
+      "lat": 40.673431
+    }
+  },
+  {
+    "id": 5115985,
+    "name": "East New York",
+    "country": "US",
+    "coord": {
+      "lon": -73.882362,
+      "lat": 40.666771
+    }
+  },
+  {
+    "id": 5115989,
+    "name": "East Northport",
+    "country": "US",
+    "coord": {
+      "lon": -73.324562,
+      "lat": 40.876759
+    }
+  },
+  {
+    "id": 5116004,
+    "name": "East Patchogue",
+    "country": "US",
+    "coord": {
+      "lon": -72.996223,
+      "lat": 40.76704
+    }
+  },
+  {
+    "id": 5116060,
+    "name": "East Setauket",
+    "country": "US",
+    "coord": {
+      "lon": -73.105942,
+      "lat": 40.94149
+    }
+  },
+  {
+    "id": 5110253,
+    "name": "Bronx",
+    "country": "US",
+    "coord": {
+      "lon": -73.923569,
+      "lat": 40.82732
+    }
+  },
+  {
+    "id": 5116508,
+    "name": "Elmont",
+    "country": "US",
+    "coord": {
+      "lon": -73.712914,
+      "lat": 40.700939
+    }
+  },
+  {
+    "id": 5116937,
+    "name": "Farmingville",
+    "country": "US",
+    "coord": {
+      "lon": -73.029549,
+      "lat": 40.831211
+    }
+  },
+  {
+    "id": 5117438,
+    "name": "Floral Park",
+    "country": "US",
+    "coord": {
+      "lon": -73.704849,
+      "lat": 40.723709
+    }
+  },
+  {
+    "id": 5117891,
+    "name": "Franklin Square",
+    "country": "US",
+    "coord": {
+      "lon": -73.675957,
+      "lat": 40.707321
+    }
+  },
+  {
+    "id": 5117949,
+    "name": "Freeport",
+    "country": "US",
+    "coord": {
+      "lon": -73.583183,
+      "lat": 40.6576
+    }
+  },
+  {
+    "id": 5118226,
+    "name": "Garden City",
+    "country": "US",
+    "coord": {
+      "lon": -73.6343,
+      "lat": 40.726768
+    }
+  },
+  {
+    "id": 5118626,
+    "name": "Glen Cove",
+    "country": "US",
+    "coord": {
+      "lon": -73.633743,
+      "lat": 40.86232
+    }
+  },
+  {
+    "id": 5119347,
+    "name": "Greenburgh",
+    "country": "US",
+    "coord": {
+      "lon": -73.842911,
+      "lat": 41.032879
+    }
+  },
+  {
+    "id": 5120095,
+    "name": "Harrison",
+    "country": "US",
+    "coord": {
+      "lon": -73.712631,
+      "lat": 40.96899
+    }
+  },
+  {
+    "id": 5120228,
+    "name": "Hauppauge",
+    "country": "US",
+    "coord": {
+      "lon": -73.202606,
+      "lat": 40.825649
+    }
+  },
+  {
+    "id": 5120478,
+    "name": "Hempstead",
+    "country": "US",
+    "coord": {
+      "lon": -73.618736,
+      "lat": 40.706211
+    }
+  },
+  {
+    "id": 5120656,
+    "name": "Hicksville",
+    "country": "US",
+    "coord": {
+      "lon": -73.525131,
+      "lat": 40.768429
+    }
+  },
+  {
+    "id": 5120987,
+    "name": "Holbrook",
+    "country": "US",
+    "coord": {
+      "lon": -73.078438,
+      "lat": 40.812321
+    }
+  },
+  {
+    "id": 5121163,
+    "name": "Holtsville",
+    "country": "US",
+    "coord": {
+      "lon": -73.045113,
+      "lat": 40.81538
+    }
+  },
+  {
+    "id": 5121636,
+    "name": "Huntington",
+    "country": "US",
+    "coord": {
+      "lon": -73.425682,
+      "lat": 40.868149
+    }
+  },
+  {
+    "id": 5121650,
+    "name": "Huntington Station",
+    "country": "US",
+    "coord": {
+      "lon": -73.411507,
+      "lat": 40.853432
+    }
+  },
+  {
+    "id": 5122331,
+    "name": "Irondequoit",
+    "country": "US",
+    "coord": {
+      "lon": -77.57972,
+      "lat": 43.213402
+    }
+  },
+  {
+    "id": 5122413,
+    "name": "Islip",
+    "country": "US",
+    "coord": {
+      "lon": -73.210388,
+      "lat": 40.72982
+    }
+  },
+  {
+    "id": 5122794,
+    "name": "Johnson City",
+    "country": "US",
+    "coord": {
+      "lon": -75.958809,
+      "lat": 42.115631
+    }
+  },
+  {
+    "id": 5123247,
+    "name": "Kenmore",
+    "country": "US",
+    "coord": {
+      "lon": -78.870041,
+      "lat": 42.965889
+    }
+  },
+  {
+    "id": 5123456,
+    "name": "Kings Park",
+    "country": "US",
+    "coord": {
+      "lon": -73.257339,
+      "lat": 40.886211
+    }
+  },
+  {
+    "id": 5123477,
+    "name": "Kingston",
+    "country": "US",
+    "coord": {
+      "lon": -73.99736,
+      "lat": 41.92704
+    }
+  },
+  {
+    "id": 5123533,
+    "name": "Kiryas Joel",
+    "country": "US",
+    "coord": {
+      "lon": -74.167923,
+      "lat": 41.342041
+    }
+  },
+  {
+    "id": 5123718,
+    "name": "Lackawanna",
+    "country": "US",
+    "coord": {
+      "lon": -78.823372,
+      "lat": 42.825611
+    }
+  }
+]
+}
