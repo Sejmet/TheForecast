@@ -21,6 +21,10 @@ class CitySearchViewController: UIViewController {
 
         setupTableView()
         setupSearchBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         searchViewModel.populateCoreDataCityArray()
     }
 
@@ -93,5 +97,13 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            searchViewModel.deleteCityFromCoreData(cityObject: searchViewModel.coreDataCityArray[indexPath.row])
+            searchViewModel.coreDataCityArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        }
     }
 }
