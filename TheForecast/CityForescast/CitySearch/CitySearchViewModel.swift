@@ -13,9 +13,10 @@ class CitySearchViewModel: NSObject {
 
     var cityArray: [CityObject] = []
     var filteredCityArray: [CityObject] = []
-    var coreDataCityArray: [CityObject] = []
+    var recentCityArray: [CityObject] = []
     
     private var forecastFactory: ForecastModelsFactory = ForecastModelsFactory()
+    private var coreDataManager: CoreDataModelManager = CoreDataModelManager()
     
     /**
      Read json file and populate an array with city objects.
@@ -41,14 +42,14 @@ class CitySearchViewModel: NSObject {
         filteredCityArray = cityArray.filter { ($0.name?.localizedCaseInsensitiveContains(cityName))! }
     }
     
-    func deleteCityFromCoreDataCityArray(cityIndex: Int) {
-        coreDataCityArray.remove(at: cityIndex)
+    func deleteCityFromRecentCityArray(cityIndex: Int) {
+        recentCityArray.remove(at: cityIndex)
     }
     
     /**
      Read core data model and populate an array with city objects.
      */
-    func populateCoreDataCityArray() {
+    func populateRecentCityArray() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -57,7 +58,7 @@ class CitySearchViewModel: NSObject {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
         request.returnsObjectsAsFaults = false
         
-        self.coreDataCityArray = []
+        self.recentCityArray = []
         
         do {
             let result = try context.fetch(request)
@@ -68,7 +69,7 @@ class CitySearchViewModel: NSObject {
                     let country = city.value(forKey: "country") as? String
                     let cityObject = CityObject(id: id, name: name, country: country, coord: nil)
                     
-                    coreDataCityArray.append(cityObject)
+                    recentCityArray.append(cityObject)
                 }
             }
         } catch {
@@ -76,123 +77,12 @@ class CitySearchViewModel: NSObject {
         }
     }
     
-    /**
-     Persist city selected by user.
-     */
     func persistCity(cityObject: CityObject) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        
-        if !isPersisted(cityObject: cityObject) {
-            checkFivePersistObject()
-            
-            let cityEntity = NSEntityDescription.entity(forEntityName: "City", in: context)
-            let newCity = NSManagedObject(entity: cityEntity!, insertInto: context)
-            newCity.setValue(cityObject.id, forKey: "id")
-            newCity.setValue(cityObject.name, forKey: "name")
-            newCity.setValue(cityObject.country, forKey: "country")
-            
-            saveCoreDataContext()
-        }
-    }
-    
-    /**
-     Check if the city is persisted in core data model to no add the same city twice.
-     */
-    private func isPersisted(cityObject: CityObject) -> Bool {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return false
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
-        request.returnsObjectsAsFaults = false
-
-        do {
-            let result = try context.fetch(request)
-            if let resultArray = result as? [NSManagedObject] {
-                for city in resultArray {
-                    if cityObject.id == city.value(forKey: "id") as? Int {
-                        return true
-                    }
-                }
-            }
-        } catch {
-            print("Fail trying to read Core Data")
-        }
-        
-        return false
-    }
-    
-    /**
-    The core data limit to save cities is 5.
-    So if the user select a new city that it is not in the core data model,
-    delete the oldest one to add the new one.
-    */
-    private func checkFivePersistObject() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            let result = try context.fetch(request)
-            if let resultArray = result as? [NSManagedObject] {
-                if resultArray.count == 5 {
-                    context.delete(resultArray[0])
-                }
-            }
-        } catch {
-            print("Fail trying to read Core Data")
-        }
-        
-        saveCoreDataContext()
+        coreDataManager.persistCity(cityObject: cityObject, forEntityName: "City")
     }
     
     func deleteCityFromPersistedModel(cityIndex: Int) {
-        let cityObject = coreDataCityArray[cityIndex]
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            let result = try context.fetch(request)
-            if let resultArray = result as? [NSManagedObject] {
-                for city in resultArray {
-                    if cityObject.id == city.value(forKey: "id") as? Int {
-                        context.delete(city)
-                    }
-                }
-            }
-        } catch {
-            print("Fail trying to read Core Data")
-        }
-        
-        saveCoreDataContext()
-    }
-    
-    private func saveCoreDataContext() {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        
-        do {
-            try context.save()
-        } catch {
-            print("Fail trying to save context")
-        }
+        let cityObject = recentCityArray[cityIndex]
+        coreDataManager.deleteCityFromPersistedModel(cityObject: cityObject, forEntityName: "City")
     }
 }
