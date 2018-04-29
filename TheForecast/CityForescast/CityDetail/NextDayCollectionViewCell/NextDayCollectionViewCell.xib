@@ -13,30 +13,36 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NextDayCollectionViewCell" id="gTV-IL-0wX" customClass="NextDayCollectionViewCell" customModule="TheForecast" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqn-aV-L6j" userLabel="ContentView">
-                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-RN-B1y" userLabel="DayLabel">
+                                <rect key="frame" x="50" y="4" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SrO-Jr-Wis" userLabel="WeatherImageView">
-                                <rect key="frame" x="25" y="5" width="30" height="30"/>
+                                <rect key="frame" x="35" y="9" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="f3G-H1-bok"/>
                                     <constraint firstAttribute="width" constant="30" id="mYf-lB-eb5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahN-Ag-GXm" userLabel="MinimumTemperatureLabel">
-                                <rect key="frame" x="5" y="40" width="24" height="17"/>
+                                <rect key="frame" x="5" y="44" width="24" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKp-bg-kwr" userLabel="MaximumTemperatureLabel">
-                                <rect key="frame" x="5" y="59" width="24" height="17"/>
+                                <rect key="frame" x="5" y="63" width="24" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,14 +50,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MUh-RN-B1y" firstAttribute="centerX" secondItem="dqn-aV-L6j" secondAttribute="centerX" id="0Td-JF-nPI"/>
                             <constraint firstItem="ahN-Ag-GXm" firstAttribute="top" secondItem="SrO-Jr-Wis" secondAttribute="bottom" constant="5" id="1pJ-5s-3LU"/>
+                            <constraint firstItem="SrO-Jr-Wis" firstAttribute="top" secondItem="MUh-RN-B1y" secondAttribute="bottom" constant="5" id="5mL-Nh-Nll"/>
                             <constraint firstItem="aKp-bg-kwr" firstAttribute="leading" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="5" id="8gr-Qg-R6m"/>
                             <constraint firstItem="SrO-Jr-Wis" firstAttribute="centerX" secondItem="dqn-aV-L6j" secondAttribute="centerX" id="KZu-wb-me5"/>
+                            <constraint firstItem="MUh-RN-B1y" firstAttribute="top" secondItem="dqn-aV-L6j" secondAttribute="top" constant="4" id="Kti-G9-uWA"/>
                             <constraint firstItem="aKp-bg-kwr" firstAttribute="top" secondItem="ahN-Ag-GXm" secondAttribute="bottom" constant="2" id="Ldu-72-pml"/>
-                            <constraint firstItem="SrO-Jr-Wis" firstAttribute="top" secondItem="dqn-aV-L6j" secondAttribute="top" constant="5" id="PPe-K9-L9w"/>
                             <constraint firstItem="ahN-Ag-GXm" firstAttribute="leading" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="5" id="QE8-5k-hdP"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ahN-Ag-GXm" secondAttribute="trailing" constant="5" id="Z0v-Xf-np0"/>
+                            <constraint firstItem="MUh-RN-B1y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="5" id="bab-4h-Lfs"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aKp-bg-kwr" secondAttribute="trailing" constant="5" id="dKK-cb-Bim"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MUh-RN-B1y" secondAttribute="trailing" constant="5" id="uXh-Zf-TbO"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aKp-bg-kwr" secondAttribute="bottom" id="y1r-IX-vaS"/>
                         </constraints>
                     </view>
@@ -66,6 +76,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="237" height="193"/>
             <connections>
+                <outlet property="dayLabel" destination="MUh-RN-B1y" id="LAo-4t-X7d"/>
                 <outlet property="maximumTemperatureLabel" destination="aKp-bg-kwr" id="RQJ-mR-HaT"/>
                 <outlet property="minimumTemperatureLabel" destination="ahN-Ag-GXm" id="ALo-lm-Gqs"/>
                 <outlet property="weatherImageView" destination="SrO-Jr-Wis" id="ElS-9f-U3k"/>

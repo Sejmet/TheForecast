@@ -13,14 +13,25 @@ class NextDayCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var minimumTemperatureLabel: UILabel!
     @IBOutlet weak var maximumTemperatureLabel: UILabel!
+    @IBOutlet weak var dayLabel: UILabel!
     
-    func setupCellWith(weatherInformation: WeatherObject, temperatureInformation: MainObject) {
-        if let minTemperature = temperatureInformation.temp_min {
-            minimumTemperatureLabel.text = "Min.:\(minTemperature)°C"
+    func setupCellWith(weatherInformation: [WeatherObject]?, temperatureInformation: MainObject?, dateUnix: Double?) {
+        if let minTemperature = temperatureInformation?.temp_min {
+            minimumTemperatureLabel.text = "Min: \(round(minTemperature))°C"
         }
         
-        if let maxTemperature = temperatureInformation.temp_max {
-            maximumTemperatureLabel.text = "Max.:\(maxTemperature)°C"
+        if let maxTemperature = temperatureInformation?.temp_max {
+            maximumTemperatureLabel.text = "Max: \(round(maxTemperature))°C"
         }
+        
+        if let unix = dateUnix {
+            let day: Date = Date(timeIntervalSince1970: unix)
+            let dateFormatter: DateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "eee dd"
+            let dateString = dateFormatter.string(from: day)
+            
+            dayLabel.text = dateString
+        }
+        
     }
 }
