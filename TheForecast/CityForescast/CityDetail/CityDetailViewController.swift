@@ -38,7 +38,7 @@ class CityDetailViewController: UIViewController {
         super.viewDidLoad()
 
         dataFromViewModel()
-        nextFiveDaysForecast()
+        nextDaysForecast()
         setupCollectionView()
     }
     
@@ -73,10 +73,10 @@ class CityDetailViewController: UIViewController {
         cityMapView.addAnnotation(annotation)
     }
     
-    func nextFiveDaysForecast() {
+    func nextDaysForecast() {
         nextFiveDaysSpinnerView.isHidden = false
         if let cityId = cityObject?.id {
-            detailViewModel.weatherForTheNextFiveDays(cityId: cityId) { (error: Error?) in
+            detailViewModel.weatherForTheNextDays(cityId: cityId) { (error: Error?) in
                 if error == nil {
                     self.nextFiveDaysCollectionView.reloadData()
                 }
@@ -118,6 +118,17 @@ class CityDetailViewController: UIViewController {
         if let pressure = detailViewModel.pressure() {
             pressureTextLabel.text = "Presion:"
             pressureLabel.text = "\(String(describing: pressure))mbar"
+        }
+        
+        if let weatherType = detailViewModel.mainWeather() {
+            switch weatherType {
+            case .clear:
+                weatherImageView.image = UIImage(named: "Sunny_Icon")
+            case .cloud:
+                weatherImageView.image = UIImage(named: "Cloudy_Icon")
+            case .rain:
+                weatherImageView.image = UIImage(named: "Rainy_Icon")
+            }
         }
     }
 }
