@@ -24,7 +24,7 @@ public struct CoordinateObject: Decodable {
 
 public struct WeatherObject: Decodable {
     public let id: Int?
-    public let main: String?
+    public let main: MainType?
     public let description: String?
 }
 
@@ -34,4 +34,10 @@ public struct MainObject: Decodable {
     public let humidity: Double?
     public let temp_min: Double?
     public let temp_max: Double?
+}
+
+public enum MainType: String, Decodable {
+    case clear = "Clear"
+    case rain = "Rain"
+    case cloud = "Clouds"
 }
