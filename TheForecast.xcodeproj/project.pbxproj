@@ -72,6 +72,9 @@
 		D6F86F182096938900228A1D /* NextDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */; };
 		D6F86F192096938900228A1D /* NextDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */; };
 		D6F86F1A2096938900228A1D /* NextDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */; };
+		D6F86F3E209698FD00228A1D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F42209698FD00228A1D /* Localizable.strings */; };
+		D6F86F3F209698FD00228A1D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F42209698FD00228A1D /* Localizable.strings */; };
+		D6F86F40209698FD00228A1D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F42209698FD00228A1D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +135,10 @@
 		D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextDayCollectionViewCell.xib; sourceTree = "<group>"; };
 		D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDaysWeatherObject.swift; sourceTree = "<group>"; };
+		D6F86F2D2096970000228A1D /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D6F86F41209698FD00228A1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D6F86F43209698FE00228A1D /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D6F86F442096990300228A1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +250,7 @@
 				D6D5C8CF2093D13F00C76E0D /* LaunchScreen.storyboard */,
 				D6D5C8D22093D13F00C76E0D /* Info.plist */,
 				D6D5C8CA2093D13D00C76E0D /* TheForecast.xcdatamodeld */,
+				D6F86F42209698FD00228A1D /* Localizable.strings */,
 			);
 			path = TheForecast;
 			sourceTree = "<group>";
@@ -426,6 +434,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = D6D5C8B72093D13D00C76E0D;
 			productRefGroup = D6D5C8C12093D13D00C76E0D /* Products */;
@@ -449,6 +458,7 @@
 				D6F86EF02096459200228A1D /* LittleCityList.json in Resources */,
 				D6D5C90A2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 				D612ED70209540C1009EB1DE /* CitySearchTableViewCell.xib in Resources */,
+				D6F86F3E209698FD00228A1D /* Localizable.strings in Resources */,
 				D6F86F142096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */,
 				D6E8C2282095704500ACBAD3 /* CityDetailViewController.xib in Resources */,
 			);
@@ -459,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E8C22B209570D400ACBAD3 /* CityDetailViewController.xib in Resources */,
+				D6F86F3F209698FD00228A1D /* Localizable.strings in Resources */,
 				D6F86F152096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */,
 				D6E8C22420956E7400ACBAD3 /* CitySearchTableViewCell.xib in Resources */,
 				D6F86EF12096459200228A1D /* LittleCityList.json in Resources */,
@@ -471,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E8C22620956E7400ACBAD3 /* CitySearchTableViewCell.xib in Resources */,
+				D6F86F40209698FD00228A1D /* Localizable.strings in Resources */,
 				D6F86F162096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */,
 				D6D5C90C2093D95100C76E0D /* CityForescast.storyboard in Resources */,
 				D6F86EF22096459200228A1D /* LittleCityList.json in Resources */,
@@ -642,8 +654,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				D6D5C8D02093D13F00C76E0D /* Base */,
+				D6F86F2D2096970000228A1D /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D6F86F42209698FD00228A1D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6F86F41209698FD00228A1D /* en */,
+				D6F86F43209698FE00228A1D /* es-419 */,
+				D6F86F442096990300228A1D /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -653,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -713,6 +737,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

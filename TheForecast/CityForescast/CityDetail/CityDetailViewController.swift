@@ -101,22 +101,22 @@ class CityDetailViewController: UIViewController {
         }
         
         if let minTemperature = detailViewModel.minimumTemperature() {
-            minimumTemperatureTextLabel.text = "Minima:"
+            minimumTemperatureTextLabel.text = "\(NSLocalizedString("Minimum", comment: "")):"
             minimumTemperatureLabel.text = "\(String(describing: round(minTemperature))) C"
         }
 
         if let maxTemperature = detailViewModel.maximumTemperature() {
-            maximumTemperatureTextLabel.text = "Maxima:"
+            maximumTemperatureTextLabel.text = "\(NSLocalizedString("Maximum", comment: "")):"
             maximumTemperatureLabel.text = "\(String(describing: round(maxTemperature))) C"
         }
         
         if let humidity = detailViewModel.humidity() {
-            humidityTextLabel.text = "Humedad:"
+            humidityTextLabel.text = "\(NSLocalizedString("Humidity", comment: "")):"
             humidityLabel.text = "\(String(describing: humidity))%"
         }
         
         if let pressure = detailViewModel.pressure() {
-            pressureTextLabel.text = "Presion:"
+            pressureTextLabel.text = "\(NSLocalizedString("Pressure", comment: "")):"
             pressureLabel.text = "\(String(describing: pressure))mbar"
         }
         
