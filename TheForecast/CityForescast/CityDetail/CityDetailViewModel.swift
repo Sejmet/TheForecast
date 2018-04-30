@@ -12,7 +12,7 @@ class CityDetailViewModel: NSObject {
 
     private var cityObject: CityWeatherObject?
     private let forecastService: ForecastServices = ForecastServices()
-    var nextFiveDaysWeather: FiveDaysWeatherObject?
+    var nextFiveDaysWeather: NextDaysWeatherObject?
     
     func cityWeatherById(cityId: Int, completion: @escaping (_ error: Error?) -> Void) {
         forecastService.cityWeatherById(cityId: cityId) { (cityWeatherObject: CityWeatherObject?, error: Error?) in
@@ -26,8 +26,8 @@ class CityDetailViewModel: NSObject {
         }
     }
     
-    func weatherForTheNextFiveDays(cityId: Int, completion: @escaping (_ error: Error?) -> Void) {
-        forecastService.cityWeatherForNext5DaysById(cityId: cityId) { (fiveDaysWeatherObject: FiveDaysWeatherObject?, error: Error?) in
+    func weatherForTheNextDays(cityId: Int, completion: @escaping (_ error: Error?) -> Void) {
+        forecastService.cityWeatherForNextDaysById(cityId: cityId) { (fiveDaysWeatherObject: NextDaysWeatherObject?, error: Error?) in
             if error == nil {
                 self.nextFiveDaysWeather = fiveDaysWeatherObject
             } else {
@@ -71,20 +71,20 @@ class CityDetailViewModel: NSObject {
         return latitude
     }
     
-    func mainWeather() -> String {
+    func mainWeather() -> MainType? {
         guard let weather = cityObject?.weather else {
-            return ""
+            return nil
         }
         
         if weather.count > 0 {
             guard let main = weather[0].main else {
-                return ""
+                return nil
             }
             
             return main
         }
         
-        return ""
+        return nil
     }
     
     func mainWeatherDescription() -> String {
