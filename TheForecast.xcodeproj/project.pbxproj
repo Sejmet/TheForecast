@@ -63,15 +63,15 @@
 		D6F86F0320965F9900228A1D /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0220965F9900228A1D /* CoreDataModelManager.swift */; };
 		D6F86F0420965F9900228A1D /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0220965F9900228A1D /* CoreDataModelManager.swift */; };
 		D6F86F0520965F9900228A1D /* CoreDataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0220965F9900228A1D /* CoreDataModelManager.swift */; };
-		D6F86F0B2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */; };
-		D6F86F0C2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */; };
-		D6F86F0D2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */; };
 		D6F86F112096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */; };
 		D6F86F122096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */; };
 		D6F86F132096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */; };
 		D6F86F142096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */; };
 		D6F86F152096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */; };
 		D6F86F162096807F00228A1D /* NextDayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */; };
+		D6F86F182096938900228A1D /* NextDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */; };
+		D6F86F192096938900228A1D /* NextDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */; };
+		D6F86F1A2096938900228A1D /* NextDaysWeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,9 +129,9 @@
 		D6E8C2272095704500ACBAD3 /* CityDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailViewController.xib; sourceTree = "<group>"; };
 		D6F86EEF2096459200228A1D /* LittleCityList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LittleCityList.json; sourceTree = "<group>"; };
 		D6F86F0220965F9900228A1D /* CoreDataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelManager.swift; sourceTree = "<group>"; };
-		D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDaysWeatherObject.swift; sourceTree = "<group>"; };
 		D6F86F0F2096807F00228A1D /* NextDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6F86F102096807F00228A1D /* NextDayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NextDayCollectionViewCell.xib; sourceTree = "<group>"; };
+		D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextDaysWeatherObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +196,7 @@
 				D635FAB22093F13A004AE22D /* CityWeatherObject.swift */,
 				D635FAB42093F57B004AE22D /* ForecastModelsFactory.swift */,
 				D612ED71209543B1009EB1DE /* CityObject.swift */,
-				D6F86F0A2096780200228A1D /* FiveDaysWeatherObject.swift */,
+				D6F86F172096938900228A1D /* NextDaysWeatherObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -573,7 +573,7 @@
 				D635FAB12093EE7F004AE22D /* ForecastServices.swift in Sources */,
 				D6F86F112096807F00228A1D /* NextDayCollectionViewCell.swift in Sources */,
 				D6F86F0320965F9900228A1D /* CoreDataModelManager.swift in Sources */,
-				D6F86F0B2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */,
+				D6F86F182096938900228A1D /* NextDaysWeatherObject.swift in Sources */,
 				D6D5C9062093D93400C76E0D /* CitySearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,7 +585,7 @@
 				D635FABA20940608004AE22D /* ForecastServicesTests.swift in Sources */,
 				D635FAB820940597004AE22D /* MockJSON.swift in Sources */,
 				D6E8C22320956E7400ACBAD3 /* CitySearchTableViewCell.swift in Sources */,
-				D6F86F0C2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */,
+				D6F86F192096938900228A1D /* NextDaysWeatherObject.swift in Sources */,
 				D6F86F0420965F9900228A1D /* CoreDataModelManager.swift in Sources */,
 				D6E8C22A209570D400ACBAD3 /* CityDetailViewModel.swift in Sources */,
 				D6E8C22F209571BA00ACBAD3 /* ForecastServices.swift in Sources */,
@@ -605,7 +605,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6F86F0D2096780200228A1D /* FiveDaysWeatherObject.swift in Sources */,
+				D6F86F1A2096938900228A1D /* NextDaysWeatherObject.swift in Sources */,
 				D6F86EEA20963B2F00228A1D /* AppDelegate.swift in Sources */,
 				D6D5C8E72093D14000C76E0D /* TheForecastUITests.swift in Sources */,
 				D6D5C9082093D93400C76E0D /* CitySearchViewController.swift in Sources */,
