@@ -8,6 +8,13 @@
 
 import UIKit
 
-class NextDaysWeatherObject: NSObject {
+public struct NextDaysWeatherObject: Decodable {
+    public let city: CityObject?
+    public let list: [WeatherListObject]?
+}
 
+public struct WeatherListObject: Decodable {
+    public let dt: Double?
+    public let main: MainObject?
+    public let weather: [WeatherObject]?
 }

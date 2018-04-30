@@ -29,12 +29,12 @@ class ForecastServices: NSObject {
         }
     }
     
-    public func cityWeatherForNext5DaysById(cityId: Int, completion: @escaping (_ fiveDaysWeatherObject: FiveDaysWeatherObject?, _ error: Error?) -> Void) {
+    public func cityWeatherForNextDaysById(cityId: Int, completion: @escaping (_ fiveDaysWeatherObject: NextDaysWeatherObject?, _ error: Error?) -> Void) {
         let urlString: String = "\(apiHost)forecast?id=\(cityId)&appid=\(openWeatherApiKey)&units=metric"
         if let url: URL = URL(string: urlString) {
             Alamofire.request(url).responseJSON { (response: DataResponse<Any>) in
                 if let data = response.data {
-                    let fiveDaysWeatherObject = self.forecastFactory.makeFiveDaysWeatherObject(json: data)
+                    let fiveDaysWeatherObject = self.forecastFactory.makeNextDaysWeatherObject(json: data)
                     completion(fiveDaysWeatherObject, response.error)
                 } else {
                     completion(nil, response.error)

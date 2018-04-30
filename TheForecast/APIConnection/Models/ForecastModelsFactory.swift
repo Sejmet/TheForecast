@@ -40,9 +40,9 @@ class ForecastModelsFactory: NSObject {
         }
     }
     
-    public func makeFiveDaysWeatherObject(json: Data) -> FiveDaysWeatherObject? {
+    public func makeNextDaysWeatherObject(json: Data) -> NextDaysWeatherObject? {
         do {
-            let result = try JSONDecoder().decode(FiveDaysWeatherObject.self, from: json)
+            let result = try JSONDecoder().decode(NextDaysWeatherObject.self, from: json)
             return result
         } catch {
             print("Error parsing a FiveDaysWeatherObject", error)
