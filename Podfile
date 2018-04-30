@@ -6,7 +6,8 @@ target 'TheForecast' do
   use_frameworks!
 
   pod 'Alamofire'
-
+  pod 'Fabric'
+  pod 'Crashlytics'
   # Pods for TheForecast
 
   target 'TheForecastTests' do
