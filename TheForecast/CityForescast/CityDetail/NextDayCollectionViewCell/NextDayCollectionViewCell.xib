@@ -36,13 +36,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahN-Ag-GXm" userLabel="MinimumTemperatureLabel">
-                                <rect key="frame" x="5" y="44" width="24" height="17"/>
+                                <rect key="frame" x="38" y="44" width="24" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKp-bg-kwr" userLabel="MaximumTemperatureLabel">
-                                <rect key="frame" x="5" y="63" width="24" height="17"/>
+                                <rect key="frame" x="38" y="63" width="24" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,14 +53,15 @@
                             <constraint firstItem="MUh-RN-B1y" firstAttribute="centerX" secondItem="dqn-aV-L6j" secondAttribute="centerX" id="0Td-JF-nPI"/>
                             <constraint firstItem="ahN-Ag-GXm" firstAttribute="top" secondItem="SrO-Jr-Wis" secondAttribute="bottom" constant="5" id="1pJ-5s-3LU"/>
                             <constraint firstItem="SrO-Jr-Wis" firstAttribute="top" secondItem="MUh-RN-B1y" secondAttribute="bottom" constant="5" id="5mL-Nh-Nll"/>
-                            <constraint firstItem="aKp-bg-kwr" firstAttribute="leading" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="5" id="8gr-Qg-R6m"/>
                             <constraint firstItem="SrO-Jr-Wis" firstAttribute="centerX" secondItem="dqn-aV-L6j" secondAttribute="centerX" id="KZu-wb-me5"/>
                             <constraint firstItem="MUh-RN-B1y" firstAttribute="top" secondItem="dqn-aV-L6j" secondAttribute="top" constant="4" id="Kti-G9-uWA"/>
                             <constraint firstItem="aKp-bg-kwr" firstAttribute="top" secondItem="ahN-Ag-GXm" secondAttribute="bottom" constant="2" id="Ldu-72-pml"/>
-                            <constraint firstItem="ahN-Ag-GXm" firstAttribute="leading" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="5" id="QE8-5k-hdP"/>
+                            <constraint firstItem="ahN-Ag-GXm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="8" id="QE8-5k-hdP"/>
+                            <constraint firstItem="aKp-bg-kwr" firstAttribute="leading" secondItem="ahN-Ag-GXm" secondAttribute="leading" id="XIJ-EX-ean"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ahN-Ag-GXm" secondAttribute="trailing" constant="5" id="Z0v-Xf-np0"/>
                             <constraint firstItem="MUh-RN-B1y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dqn-aV-L6j" secondAttribute="leading" constant="5" id="bab-4h-Lfs"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aKp-bg-kwr" secondAttribute="trailing" constant="5" id="dKK-cb-Bim"/>
+                            <constraint firstItem="ahN-Ag-GXm" firstAttribute="centerX" secondItem="dqn-aV-L6j" secondAttribute="centerX" id="nvC-H6-QX1"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MUh-RN-B1y" secondAttribute="trailing" constant="5" id="uXh-Zf-TbO"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aKp-bg-kwr" secondAttribute="bottom" id="y1r-IX-vaS"/>
                         </constraints>
