@@ -9,7 +9,7 @@
 import XCTest
 
 class ForecastServicesTests: XCTestCase {
-
+    
     func testParseCityWeatherObject() {
         if let data = MockJSON.weatherJSON.data(using: String.Encoding.utf8) {
             do {
@@ -21,4 +21,25 @@ class ForecastServicesTests: XCTestCase {
         }
     }
     
+    func testParseCityObject() {
+        if let data = MockJSON.citiesJSON.data(using: String.Encoding.utf8) {
+            do {
+                let result = try JSONDecoder().decode(CityListResponse.self, from: data)
+                print("Success: \(result)")
+            } catch {
+                XCTFail("Error parsing a CityWeatherObject \(error)")
+            }
+        }
+    }
+    
+    func testParseNextDaysWeatherObject() {
+        if let data = MockJSON.nextDaysWeatherJSON.data(using: String.Encoding.utf8) {
+            do {
+                let result = try JSONDecoder().decode(NextDaysWeatherObject.self, from: data)
+                print("Success: \(result)")
+            } catch {
+                XCTFail("Error parsing a CityWeatherObject \(error)")
+            }
+        }
+    }
 }

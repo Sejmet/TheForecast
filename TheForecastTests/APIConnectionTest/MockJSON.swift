@@ -93,8 +93,64 @@ struct MockJSON {
                 "lon": 76,
                 "lat": 29
                 }
+            }
+    ]
+}
+"""
+    
+    static let nextDaysWeatherJSON: String = """
+{
+    "cod": "200",
+    "message": 0.017,
+    "cnt": 40,
+    "list": [
+        {
+            "dt": 1525046400,
+            "main": {
+                "temp": 9.49,
+                "temp_min": 9.24,
+                "temp_max": 9.49,
+                "pressure": 1026.14,
+                "sea_level": 1027.83,
+                "grnd_level": 1026.14,
+                "humidity": 80,
+                "temp_kf": 0.26
+            },
+            "weather": [
+                {
+                    "id": 500,
+                    "main": "Rain",
+                    "description": "light rain",
+                    "icon": "10n"
+                }
+            ],
+            "clouds": {
+                "all": 0
+            },
+            "wind": {
+                "speed": 5.57,
+                "deg": 296
+            },
+            "rain": {
+                "3h": 0.12515
+            },
+            "sys": {
+                "pod": "n"
+            },
+            "dt_txt": "2018-04-30 00:00:00"
         }
+    ],
+    "city": {
+        "id": 5108955,
+        "name": "Bethpage",
+        "coord": {
+            "lat": 40.7443,
+            "lon": -73.4821
+        },
+        "country": "US"
     }
+}
+
 """
 
 }
