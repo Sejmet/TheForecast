@@ -33,5 +33,17 @@ class NextDayCollectionViewCell: UICollectionViewCell {
             dayLabel.text = dateString
         }
         
+        if weatherInformation != nil {
+            if let weatherType = weatherInformation![0].main {
+                switch weatherType {
+                case .clear:
+                    weatherImageView.image = UIImage(named: "Sunny_Icon")
+                case .cloud:
+                    weatherImageView.image = UIImage(named: "Cloudy_Icon")
+                case .rain:
+                    weatherImageView.image = UIImage(named: "Rainy_Icon")
+                }
+            }
+        }
     }
 }
